@@ -44,7 +44,7 @@ int solve(long int nod, long long int nok) {
 		set<int>se;
 		int div = 2;
 		long  int n = nok / nod;
-		long int ce = 0;
+		long int pairs = 0;
 		while (n > 1)
 		{
 			while (n % div == 0)
@@ -57,9 +57,9 @@ int solve(long int nod, long long int nok) {
 			else div += 2;
 		}
 
-		ce += (count(se.size()));
+		pairs += (count(se.size()));
 		// Учитываем две тривиальные пары (n,1) и (1,n)
-		return (ce + 2);
+		return (pairs + 2);
 	}
 	else return 0;
 }
